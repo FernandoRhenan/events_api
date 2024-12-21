@@ -1,0 +1,12 @@
+CREATE EXTENSION IF NOT EXISTS "pgcrypto";
+
+CREATE TABLE event (
+    id UUID DEFAULT gen_random_id() PRIMARY KEY,
+    title VARCHAR(80) NOT NULL,
+    description VARCHAR(250) NOT NULL,
+    img_url VARCHAR(100) NOT NULL,
+    event_url VARCHAR(100) NOT NULL,
+    date TIMESTAMP WITHOUT TIME ZONE NOT NULL,
+    remote BOOLEAN NOT NULL,
+
+);

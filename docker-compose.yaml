@@ -1,0 +1,14 @@
+services:
+  database:
+    container_name: postgres-eventos
+    image: postgres:14.11-alpine
+    restart: no
+    environment:
+      - POSTGRES_PASSWORD=password
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
+
+volumes:
+  postgres_data:
