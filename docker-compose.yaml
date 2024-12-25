@@ -1,7 +1,7 @@
 services:
   database:
     container_name: postgres-eventos
-    image: postgres:14.11-alpine
+    image: postgres:16.4
     restart: no
     environment:
       - POSTGRES_PASSWORD=password
